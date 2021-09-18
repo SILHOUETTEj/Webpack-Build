@@ -26,6 +26,9 @@ module.exports = {
             chunks: 'all'
         } 
     },
+    devServer: {
+        port: 3000
+    },
     module: {
         rules: [
             // JavaScript
