@@ -1,6 +1,7 @@
 // import './styles/style.css'
 import {Post} from './Post.js'
 import img from './assets/picture.jpg';
+import './styles/style.css'
 
 
 // const title = document.createElement('h1');
