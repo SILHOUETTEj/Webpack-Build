@@ -5,11 +5,12 @@
     font-family: 'Roboto', sans-serif;
 }
 .title{
-    color:aquamarine;
+    color:indigo;
     text-decoration: underline;
     max-width: 300px;
     min-height: 300px;
     margin: auto;
     background: url('./../assets/img/picture.jpg');
     background-size: cover;
+    text-align: center;
 }

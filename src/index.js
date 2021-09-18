@@ -1,7 +1,7 @@
-// import './styles/style.css'
-import {Post} from './Post.js'
+import * as $ from 'jquery';
+import {Post} from './Post.js';
 import img from './assets/img/picture.jpg';
-import './styles/style.css'
+import './styles/style.css';
 
 
 // const title = document.createElement('h1');
@@ -38,6 +38,7 @@ root.append(title, p)
 console.log('hey, hey');
 const post = new Post('Webpack Post Title')
 console.log('Post to String', post.toString());
+$('pre').html(post.toString());
 
 
 

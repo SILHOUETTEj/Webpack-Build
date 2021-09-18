@@ -12,7 +12,7 @@
             date: this.date.toJSON(),
            
             
-        })
+        }, null , 2 )
     }
     getUpperCase(){
         return this.title.toUpperCase();
