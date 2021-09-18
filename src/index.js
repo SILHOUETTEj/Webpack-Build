@@ -1,4 +1,4 @@
-import './styles/style.css'
+// import './styles/style.css'
 import {Post} from './Post.js'
 import json from './assets/json'
 
