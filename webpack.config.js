@@ -11,6 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
+        assetModuleFilename: 'assets/[name][ext]'
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -22,10 +23,16 @@ module.exports = {
     ],
     module: {
         rules: [
+            // JavaScript
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader'],
+            },
+             // изображения
+             {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
             },
         ],
     }

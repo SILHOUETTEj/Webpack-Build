@@ -1,11 +1,14 @@
 // import './styles/style.css'
 import {Post} from './Post.js'
+import img from './assets/picture.jpg';
 
 
 // const title = document.createElement('h1');
 // title.textContent = "Webpack"
 // const root = document.querySelector('#root')
 // root.append(title)
+
+
 
 class Game {
     name = 'Violin Charades'
@@ -20,9 +23,14 @@ p.textContent = `I like ${myGame.name}.`
 const title = document.createElement('h1')
 title.textContent = 'Как интересно!'
 
+
+
+
 // добавляем параграф и заголовок в DOM
 const root = document.querySelector('#root')
 root.append(title, p)
+
+
 
 
 
