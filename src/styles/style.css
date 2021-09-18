@@ -1,0 +1,17 @@
+.container{
+    padding-top: 2rem;
+    background-color: rgba(30, 95, 180,50%);
+    margin: 0 auto;
+    max-width: 400px;
+    min-height: 500px;
+}
+h1{
+    text-align: center;
+}
+.logo{
+    background-image: url('./../assets/picture.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    margin:10px auto;
+}
