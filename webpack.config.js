@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
-        assetModuleFilename: 'assets/[name][ext]'
+        assetModuleFilename: 'assets/img/[name][ext]'
     },
     plugins: [
         new HTMLWebpackPlugin({

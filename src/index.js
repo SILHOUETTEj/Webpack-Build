@@ -1,6 +1,6 @@
 // import './styles/style.css'
 import {Post} from './Post.js'
-import img from './assets/picture.jpg';
+import img from './assets/img/picture.jpg';
 import './styles/style.css'
 
 
