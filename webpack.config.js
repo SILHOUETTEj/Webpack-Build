@@ -3,8 +3,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
+const isDev = process.env.NODE_ENV === 'development';
+console.log("Is Dev: ", isDev);
 
 
 module.exports = {
@@ -33,7 +35,8 @@ module.exports = {
         } 
     },
     devServer: {
-        port: 3000
+        port: 3000,
+        hot: isDev
        
     },
     module: {
@@ -59,7 +62,11 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader: MiniCssExtractPlugin.loader
+                        // options: {
+                          
+                        // }
+                        
                         
                       }, 'css-loader'
                     ],
