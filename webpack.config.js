@@ -1,6 +1,9 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 
 
@@ -19,7 +22,10 @@ module.exports = {
             template:path.resolve(__dirname, './src/index.html'),
             filename: 'index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        })
     ],
     optimization:{
         splitChunks: {         
@@ -28,6 +34,7 @@ module.exports = {
     },
     devServer: {
         port: 3000
+       
     },
     module: {
         rules: [
@@ -47,10 +54,15 @@ module.exports = {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
                 type: 'asset/inline',
             },
-             // CSS, PostCSS, Sass
+             // CSS
              {
                 test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        
+                      }, 'css-loader'
+                    ],
             },
         ],
     }
