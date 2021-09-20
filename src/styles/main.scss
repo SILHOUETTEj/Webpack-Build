@@ -1,0 +1,12 @@
+$color: red;
+
+
+body{
+    color:$color;
+}
+.card{
+    &__inner{
+        background-color: $color;
+        color:white;
+    }
+}

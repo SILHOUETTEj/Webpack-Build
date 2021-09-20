@@ -2,6 +2,7 @@ import * as $ from 'jquery';
 import {Post} from './Post.js';
 import img from './assets/img/picture.jpg';
 import './styles/style.css';
+import './styles/main.scss';
 
 
 // const title = document.createElement('h1');
